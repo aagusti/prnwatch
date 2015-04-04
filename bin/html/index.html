@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Web to DotMatrix</title>
+</head>
+<body>
+<strong>Konfigurasi Printer.</strong>
+<ol class="task-list">
+<li>Install printer dengan menggunakan driver "Generic Text/Only"</li>
+<li>Plih opsi "Print Direct to the printer" pada Printer Properties &gt; Advance Setting</li>
+<li>Set Printer "Generic Text/Only" menjadi default printer</li>
+</ol>
+
+<strong>Testing Cetak File.</strong>
+<form name="dmsample" id="dmsample" action="http://localhost:8282/cetak" 
+      method="post">
+FileName <input type="text" name="filename" id="filename" value="test.prn"><br>      
+<textarea id='text2print' name="text2print" cols="60" rows="20" readonly>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</textarea><br>
+<button name="btnprint" id="btnprint" type = "submit">Print</button>
+</form>
+<p>Catatan:
+Aplikasi ini masih ada bug apabila saat akan mencetak printer tidak dalam keadaan hidup
+Solusinya Tutup Aplikasi dengan tombol Close atau dengan tanda silang.</p>
+
+<p>Semoga membantu</p>
+</body>
+</html>

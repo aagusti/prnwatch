@@ -4,13 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, dirwatch, Printers, Buttons, ExtCtrls;
-
-type
-  TPrnBuffRec = record
-  bufflength: Word;
-  Buff_1: array[0..255] of Char;
-end;
+  Dialogs, StdCtrls, dirwatch, Printers, Buttons, ExtCtrls, prtmodule;
 
 type
   TForm1 = class(TForm)
@@ -50,40 +44,6 @@ var
 implementation
 
 {$R *.dfm}
-
-function DirectToPrinter(S: string; NextLine: Boolean): Boolean;
-var
-  Buff: TPrnBuffRec;
-  TestInt: Integer;
-begin
-  TestInt := PassThrough;
-  if Escape(Printer.Handle, QUERYESCSUPPORT, SizeOf(TESTINT), @testint, nil) > 0 then
-  begin
-    if NextLine then  S := S + #13 + #10;
-    StrPCopy(Buff.Buff_1, S);
-    Buff.bufflength := StrLen(Buff.Buff_1);
-    Escape(Printer.Canvas.Handle, Passthrough, 0, @buff, nil);
-    Result := True;
-  end
-  else
-    Result := False;
-end;
-
-function GetTempDirectory: String;
-var
-  tempFolder: array[0..MAX_PATH] of Char;
-begin
-  GetTempPath(MAX_PATH, @tempFolder);
-  result := StrPas(tempFolder);
-end;
-
-function GetDefaultPrinter: string;
-var
-  ResStr: array[0..255] of Char;
-begin
-  GetProfileString('Windows', 'device', '', ResStr, 255);
-  Result := StrPas(ResStr);
-end;
 
 
 function Tform1.PrintFile(afile:string):boolean;

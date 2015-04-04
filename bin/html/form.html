@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+<form name='print' method="POST" action="./cetak">
+<p>Konfigurasi Printer.</p>
+Halaman <input type="text" value='1' name='page' id='page'><br>
+Memo <textarea type="text" cols='50' rows="20" name='memo' id='memo'>
+prnwatch digunakan untuk memantau dan mencetak file text dengan menggunakan RAW print.
+
+    Download file prnwatach.zip yang ada di folder bin
+    Extract file zip ke folder yang mudah diingat
+    Jalankan file prnwatch.exe
+
+Konfigurasi Printer.
+
+    Install printer dengan menggunakan driver "Generic Text/Only"
+    Plih opsi "Print Direct to the printer" pada Printer Properties > Advance Setting
+    Set Printer "Generic Text/Only" menjadi default printer
+
+Testing Cetak File.
+
+    "Open text file" untuk membuka file text dan meload ke dalam memo
+    "Print" digunakan untuk mncetak text yang terdapat pada memo.
+
+Konfigurasi Aplikasi.
+
+    "Folder to Monitor" digunakan untuk menentukan Folder yang akan dimonitor
+    Simpan File yang akan di cetak pada folder "Folder to Monitor"
+    Aplikasi akan langsung mencetak
+
+Catatan: Aplikasi ini masih ada bug apabila saat akan mencetak printer tidak dalam keadaan hidup Solusinya Tutup Aplikasi dengan tombol Close atau dengan tanda silang.
+
+Semoga membantu
+</textarea><br>
+<button type="submit">Print</button>
+</form>
+</body>
+</html>
