@@ -1,11 +1,26 @@
 # prnwatch
-PRN File Watcher
+PRN File Watcher/Web to Dot Matrix
 
-prnwatch digunakan untuk memantau dan mencetak file text dengan menggunakan RAW print.
+prnwatch/web2dm digunakan untuk memantau dan mencetak file text dengan menggunakan RAW print.
 
-1. Download file prnwatach.zip yang ada di folder bin
-2. Extract file zip ke folder yang mudah diingat
-3. Jalankan file prnwatch.exe
+1. Download file web2dm.sfx.exe yang ada di folder bin
+2. Lakukan instalasi dengan double click file yang di download
+3. Jalankan shortcut yang terbuat di desktop web2dm 
+
+Ada 2 Fungsi Aplikasi
+
+A. File Monitoring:
+
+1. Aplikasi akan melakukan monitoring folder temporary 
+2. Apabila ada file *.prn maka akan dilakukan pencetakan secara RAW print.
+
+B. Port Listening:
+
+1. Aplikasi listen pada port 8282
+2. Buat request post ke port tersebut dengan parameter:
+   a. text2print  -> Text yang akan di cetak
+   b. filename    -> Nama file temporary untuk penyimpanan ke folder temp.
+
 
 Konfigurasi Printer.
 
@@ -20,12 +35,13 @@ Testing Cetak File.
  
 Konfigurasi Aplikasi.
 
-1. "Folder to Monitor" digunakan untuk menentukan Folder yang akan dimonitor
-2. Simpan File yang akan di cetak pada folder "Folder to Monitor"
+1. "Temporary Filder" menunjukan Folder yang dimonitor
+2. Simpan File yang akan di cetak pada folder "Temporary Filder"
 3. Aplikasi akan langsung mencetak 
 
 Catatan:
 Aplikasi ini masih ada bug apabila saat akan mencetak printer tidak dalam keadaan hidup
+Selain itu request post harus terdapat 2 parameter text2print dan filename.
 Solusinya Tutup Aplikasi dengan tombol Close atau dengan tanda silang.
 
 Semoga membantu
