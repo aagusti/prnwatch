@@ -22,6 +22,8 @@ type
     BitBtn1: TBitBtn;
     IdHTTPServer1: TIdHTTPServer;
     DirectoryWatch1: TDirectoryWatch;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure btnStartClick(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure IdHTTPServer1CommandGet(AThread: TIdPeerThread;
@@ -161,8 +163,9 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   lblPrinter.Caption:=GetDefaultPrinter;
+  lblTmpFolder.Cation:= getTempDirectory;
   DirectoryWatch1.Directory:= getTempDirectory;
-btnStart.Click
+  btnStart.Click
 end;
 
 procedure Tform2.PrintMemo();

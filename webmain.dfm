@@ -16,9 +16,9 @@ object Form2: TForm2
   TextHeight = 13
   object Memo1: TMemo
     Left = 0
-    Top = 56
+    Top = 81
     Width = 568
-    Height = 392
+    Height = 367
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -36,12 +36,12 @@ object Form2: TForm2
     Left = 0
     Top = 0
     Width = 568
-    Height = 56
+    Height = 81
     Align = alTop
     TabOrder = 1
     DesignSize = (
       568
-      56)
+      81)
     object Label3: TLabel
       Left = 8
       Top = 3
@@ -56,9 +56,23 @@ object Form2: TForm2
       Height = 13
       Caption = 'Printer'
     end
+    object Label1: TLabel
+      Left = 8
+      Top = 24
+      Width = 59
+      Height = 13
+      Caption = 'Temp Folder'
+    end
+    object Label2: TLabel
+      Left = 96
+      Top = 24
+      Width = 60
+      Height = 13
+      Caption = 'lblTmpFolder'
+    end
     object btnClose: TBitBtn
       Left = 492
-      Top = 25
+      Top = 51
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -67,7 +81,7 @@ object Form2: TForm2
     end
     object btnPrint: TBitBtn
       Left = 416
-      Top = 25
+      Top = 51
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -77,7 +91,7 @@ object Form2: TForm2
     end
     object btnOpenFile: TBitBtn
       Left = 294
-      Top = 25
+      Top = 51
       Width = 121
       Height = 25
       Anchors = [akTop, akRight]
@@ -86,7 +100,7 @@ object Form2: TForm2
     end
     object btnStart: TBitBtn
       Left = 8
-      Top = 25
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Start'
@@ -95,7 +109,7 @@ object Form2: TForm2
     end
     object BitBtn1: TBitBtn
       Left = 85
-      Top = 25
+      Top = 51
       Width = 75
       Height = 25
       Caption = 'Stop'
