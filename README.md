@@ -14,22 +14,15 @@ A. File Monitoring:
 1. Aplikasi akan melakukan monitoring folder temporary 
 2. Apabila ada file *.prn maka akan dilakukan pencetakan secara RAW print.
 
-B. Port Listening:
-
-1. Aplikasi listen pada port 8282
-2. Buat request post ke port tersebut dengan parameter:
-   a. text2print  -> Text yang akan di cetak
-   b. filename    -> Nama file temporary untuk penyimpanan ke folder temp.
-
-
 Konfigurasi Printer.
 
 1. Install printer dengan menggunakan driver "Generic Text/Only"
 2. Plih opsi "Print Direct to the printer" pada Printer Properties > Advance Setting
 3. Set Printer "Generic Text/Only" menjadi default printer
- 
-Testing Cetak File.
+4. Standarr Software Printer untuk Epson adalah IBM-PPDS
+5. Character Table Menggunakan PC-850
 
+Testing Cetak File.
 1. "Open text file" untuk membuka file text dan meload ke dalam memo
 2. "Print" digunakan untuk mncetak text yang terdapat pada memo.
  
@@ -41,7 +34,16 @@ Konfigurasi Aplikasi.
 
 Catatan:
 Aplikasi ini masih ada bug apabila saat akan mencetak printer tidak dalam keadaan hidup
-Selain itu request post harus terdapat 2 parameter text2print dan filename.
 Solusinya Tutup Aplikasi dengan tombol Close atau dengan tanda silang.
-
+Untuk Menghapus Printer Job yang tidak dapat dihapus gunakan File "delprintjob.cmd" dengan menggunakan run as administrator
 Semoga membantu
+
+Change Log
+Versi 2
+1. Penambahan Informasi Printer dan Kertas/Form Aktif
+2. Penambahan Printer Properties 
+   Berfungsi untuk menentukan printer dan kertas/form yang digunakan
+3. Checklist Font Condensed untuk mencetak dengan CPI yang lebih besar (17/20CPI) 
+
+Versi 1.
+Initial Version
