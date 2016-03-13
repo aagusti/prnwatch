@@ -5,13 +5,13 @@ uses Windows, SysUtils, Printers, Variants, Classes;
 type
   TPrnBuffRec = record
   bufflength: Word;
-  Buff_1: array[0..255] of Char;
+  Buff_1: array[0..255] of AnsiChar;
 end;
 
 
 function DirectToPrinter(S: string; NextLine: Boolean): Boolean;
 function GetTempDirectory: String;
-function PrintFile(afile:string):boolean;
+function PrintFile(esc, afile:string):boolean;
 function GetDefaultPrinter: string;
 function StringPrints(ts:TStrings):boolean;
 
@@ -51,7 +51,7 @@ begin
   Result := StrPas(ResStr);
 end;
 
-function PrintFile(afile:string):boolean;
+function PrintFile(esc, afile:string):boolean;
 var myFile:TextFile;
     s:string;
 begin
@@ -63,6 +63,7 @@ begin
     try
       printer.BeginDoc;
       try
+        DirectToPrinter(esc,False);
         while not Eof(myFile) do
         begin
           ReadLn(myFile, s);
