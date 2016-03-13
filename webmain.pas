@@ -297,7 +297,7 @@ begin
   if chkCondensed.Checked then
      result := #27#15
   else
-     result := #27#18;
+     result := #27#64;
 end;
 
 procedure TForm2.cboPrintersChange(Sender: TObject);
